@@ -63,6 +63,8 @@ $$
 ### 转换参考系
 #### 向量基变更 Vector change basis
 对于在坐标系 _(e<sub>1</sub>, e<sub>2</sub>)_ 上的向量 _r_，把它的坐标点映射到 _(b<sub>1</sub>,b<sub>2</sub>)_ ，_r_ 在新的坐标系中的坐标点是
+
+
 $$
 \left[\frac{r\cdot b_1}{|b_1|^2},\frac{r\cdot b_2}{|b_2|^2}\right]^T
 $$
@@ -104,6 +106,8 @@ $$
 
 #### 矩阵与旋转角度 _θ_ 之间的关系
 转换矩阵为
+
+
 $$
 \begin{bmatrix}cos\theta&sin\theta\\-sin\theta&cos\theta\end{bmatrix}
 $$
@@ -123,10 +127,14 @@ $$A^{-1}A = I$$
 矩阵 _A_ 的行列式表示为 _det(A)_ 或 _|A|_ .
 
 对于矩阵 
+
+
 $$
 A=\begin{bmatrix}a&b\\c&d\end{bmatrix}
 $$
-  _|A|=a d-c d_
+ 
+
+ _|A|=a d-c d_
 
 > <p align="center"><img src="./img/matrix-determinant.png" width="400"/></p>
 
@@ -162,6 +170,8 @@ Transform (rotate) _R_ in _B_'s coordinates:  _B<sup>-1</sup>RB_
 
 ### 格拉姆-施密特正交化 The Gram–Schmidt process
 如果内积空间上的一组向量能够组成一个子空间，那么这一组向量就称为这个子空间的一个基。Gram－Schmidt正交化提供了一种方法，能够通过这一子空间上的一个基得出子空间的一个正交基，并可进一步求出对应的标准正交基。
+
+
 $$
 \begin{aligned} \beta_1&=v_1,&e_1=\dfrac{\beta_1}{\left|\beta_1\right|}\\ \beta_2&=v_2-\left(v_2\cdot e_1\right)e_1,&e_2=\dfrac{\beta_2}{\left|\beta_2\right|}\\ \beta_3&=v_3-\left(v_3\cdot e_1\right)e_1-\left(v_3\cdot e_2\right)e_2,&e_3=\dfrac{\beta_3}{\left|\beta_3\right|}\\ \vdots\\ \beta_n&=v_n-\sum^{n-1}_{i=1}\left(v_n\cdot e_i\right)e_i,&e_n=\dfrac{\beta_n}{\left|\beta_n\right|} \end{aligned}
 $$
@@ -197,7 +207,11 @@ Where $E$ is calculated via the gram-schmidt process, $T_E$ is the transformatio
 
 根据线性方程组理论，为了使这个方程有非零解，矩阵 _A_ 的行列式  _det(A - λI)=0_ 必须是零。
 
-例如，矩阵 _A_ 为<img src="https://latex.codecogs.com/gif.latex?\begin{pmatrix}&space;a&space;&&space;b&space;\\&space;c&space;&&space;d&space;\end{pmatrix}" title="\begin{pmatrix} a & b \\ c & d \end{pmatrix}" />，那么
+例如，矩阵 _A_ 为
+$$
+\begin{pmatrix} a & b \\ c & d \end{pmatrix}
+$$
+，那么
 $$
 \det\left(\begin{pmatrix}a&b\\c&d\end{pmatrix}-\begin{pmatrix}\lambda & 0\\0&\lambda\end{pmatrix}\right)=0
 $$
@@ -223,6 +237,8 @@ $$
 其中，_C_ 是**特征向量**(eigenvectors)，$D$由**特征值**(eigenvalues)构成.
 
 一个例子：
+
+
 $$
 \begin{align*} T&=\begin{pmatrix}1&1\\0&2\end{pmatrix},C=\begin{pmatrix}1&1\\0&1\end{pmatrix},C^{-1}=\begin{pmatrix} 1 & -1 \\0&1\end{pmatrix},D=\begin{pmatrix}1&0\\0&2\end{pmatrix}\\ T^2&=\begin{pmatrix}1&1\\0&1\end{pmatrix}\begin{pmatrix}1&0\\0&2\end{pmatrix}^{2}\begin{pmatrix} 1&-1\\0&1\end{pmatrix}=\begin{pmatrix}1&3\\0&4\end{pmatrix} \end{align*}
 $$

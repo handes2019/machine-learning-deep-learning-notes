@@ -145,6 +145,8 @@ J<sub>F</sub>(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)_，或者 (<sup>
 * v(x, y) = 3y - 2x
 
 则Jacobians Matrix为：
+
+
 $$
 \begin{aligned}J&=\left[\begin{array}{ll}{\frac{\partial u}{\partial x}}&{\frac{\partial u}{\partial y}}\\ {\frac{\partial v}{\partial x}}&{\frac{\partial v}{\partial y}}\end{array}\right] =\left[\begin{array}{ll}{1}&{-2}\\{-2}&{3}\end{array}\right] \end{aligned}
 $$
@@ -159,6 +161,8 @@ $$
 * _y(r, θ) = r sin(θ)_
 
 则Jacobians Matrix为：
+
+
 $$
 \begin{aligned} J &=\left[\begin{array}{ll}{\frac{\partial x}{\partial r}}&{\frac{\partial x}{\partial\theta}} \\ {\frac{\partial y}{\partial r}}&{\frac{\partial y}{\partial\theta}}\end{array}\right]=\left[\begin{array}{ll}{\cos(\theta)} & {-r\sin(\theta)} \\ {\sin(\theta)}&{r\cos(\theta)}\end{array}\right] \end{aligned}
 $$
@@ -196,6 +200,8 @@ $$
 可以看到 _z(x, y)_ 在有很多局部最大、最小值。对于其Jacobians Matrix，你会发现有多个为0的值，但是无法判断是否是最大值或最小值。因此需要通过定义二阶导数来观察。就需要引入Hessian Matrix。
 
 Hessian Matrix是一个以德国数学家**Ludwig Otto Hesse**命名的多变量实值函数的二阶偏导数组成的方块矩阵。假设_F : R<sub>n</sub> →  R<sub>m</sub>_ 是一个从 _n_ 维欧氏空间映射到到  _m_ 维欧氏空间的函数。假设一个函数由 _m_ 个实函数组成：_y<sub>1</sub>(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>), ..., y<sub>n</sub>(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)_，这些函数的二阶偏导数可以组成 _m_ 行 _n_ 列的矩阵，矩阵就是Hessian矩阵：
+
+
 $$
 \mathbf{H}=\left[\begin{array}{cccc}{\frac{\partial^{2}f}{\partial x_{1}^{2}}}&{\frac{\partial^{2} f}{\partial x_{1} \partial x_{2}}} & {\cdots} & {\frac{\partial^{2} f}{\partial x_{1}\partial x_{n}}}\\ {\frac{\partial^{2}f}{\partial x_{2}\partial x_{1}}}&{\frac{\partial^{2}f}{\partial x_{2}^{2}}}&{\cdots} & {\frac{\partial^{2}f}{\partial x_{2}\partial x_{n}}}\\ {\vdots}&{\vdots}&{\ddots}&{\vdots}\\ {\frac{\partial^{2}f}{\partial x_{n}\partial x_{1}}}&{\frac{\partial^{2}f}{\partial x_{n}\partial x_{2}}} & {\cdots}&{\frac{\partial^{2} f}{\partial x_{n}^{2}}}\end{array}\right]
 $$
@@ -252,14 +258,17 @@ H<sub>F</sub>(x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub>)_，或者 (<sup>
 ### 泰勒级数
 
 当 x = 0, 可得
+
+
 $$
 \sum ^{\infty }_{n=0}\dfrac {f^{\left( n\right) }\left( 0\right) }{n!}x^{n}
 $$
 
 
 
-
 其中
+
+
 $$
 \begin{aligned} f(x)&=f(p)\\ f(x)&=f(p)+f'(p)(x-p)\\ f(x)&=f(p)+f'(p)(x-p)+\frac{1}{2}f''(p-p)(x-p)^2\\ f(x)&=\sum^{\infty }_{n=0}\dfrac{f^{\left(n\right)}\left(p\right)}{n!}(x-p)^{n} \end{aligned}
 $$
@@ -276,9 +285,13 @@ $$
 ![](img\multivariate-taylor.png)
 
 多变量泰勒级数的公式：
+
+
 $$
 \begin{align*} f(x+\partial_x, y+\partial_y)&={f(x,y)}\\ &{+\left(\partial_{x}f(x,y)\Delta x+\partial_{y} f(x,y) \Delta y\right)}\\ &{+\frac{1}{2}\left(\partial_{x x} f(x,y) \Delta x^{2}+2 \partial_{x y} f(x,y) \Delta x \Delta y+\partial_{y y} f(x,y) \Delta y^{2}\right)} \end{align*}
 $$
+
+
 实际上：
 
 * 第二行可以写作 _J<sub>f</sub> Δx_
