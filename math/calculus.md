@@ -33,15 +33,21 @@
 
 ## Derivative 导数
 导数的定义:
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?\frac{df}{dx}&space;=&space;f'(x)&space;=&space;\lim&space;_{\Delta&space;x\rightarrow&space;0}\left(&space;\dfrac&space;{f\left(&space;x&space;&plus;&space;\Delta&space;x&space;\right)&space;-f(x)}{\Delta&space;x}\right)" title="\frac{df}{dx} = f'(x) = \lim _{\Delta x\rightarrow 0}\left( \dfrac {f\left( x + \Delta x \right) -f(x)}{\Delta x}\right)" />
-</p>
+$$
+\frac{df}{dx} = f'(x) = \lim _{\Delta x\rightarrow 0}\left( \dfrac {f\left( x + \Delta x \right) -f(x)}{\Delta x}\right)
+$$
+
+
 
 ### 导数基本规则
 #### 线性法则 (Sum / Subtraction rule)
-<p align="center">
-<img src="https://latex.codecogs.com/svg.image?\begin{aligned}\dfrac{d}{dx}\left(f\left(x\right)&plus;g\left(x\right)\right)=\dfrac{df\left(x\right)}{dx}&plus;\dfrac{dg\left(x\right)}{dx}\end{aligned}" title="\begin{aligned}\dfrac{d}{dx}\left(f\left(x\right)+g\left(x\right)\right)=\dfrac{df\left(x\right)}{dx}+\dfrac{dg\left(x\right)}{dx}\end{aligned}" />
-</p>
+
+$$
+\begin{aligned}\dfrac{d}{dx}\left(f\left(x\right)+g\left(x\right)\right)=\dfrac{df\left(x\right)}{dx}+\dfrac{dg\left(x\right)}{dx}\end{aligned}
+$$
+
+
+
 
 #### 指数法则 (Power rule)
 
